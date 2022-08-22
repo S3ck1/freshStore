@@ -1,0 +1,222 @@
+:root {
+  --orange: #ff9f1c;
+  --orange2: #ffbf69;
+  --light-blue: #2ec4b6;
+  --light-blue2: #cbf3f0;
+  
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  font-size: 2.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color:black;
+}
+
+h1{
+  font-size: 4.5rem;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  color: orange;
+}
+
+h1 i {
+  color: black
+}
+
+h1 i:hover {
+  background-image: url(../icons/face-grin-hearts-regular.svg);
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-nav {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  border: solid;
+  margin: auto;
+  margin-top: 5rem;
+  padding: 1.5rem 0 1.5rem 0;
+  background-color: var(--light-blue2);
+}
+
+
+.main-nav div{
+  font-weight: 400;
+  padding: 0 10rem 0 10rem;
+}
+
+
+.nav-logo {
+  margin-right: auto;
+}
+
+.nav-menu {
+  margin: auto;
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+}
+
+.nav-menu a{
+  color: black
+}
+.nav-menu a:hover {
+  color: var(--orange);
+  font-weight: 600;
+} 
+
+.nav-btns {
+  margin-left: auto;
+}
+
+.nav-logo span::hover {
+  cursor:pointer;
+}
+
+.nav-btns span:hover{
+  cursor:pointer;
+  color: var(--orange);
+}
+
+#icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+
+.main-container {
+  margin: 5rem 25rem 5rem 25rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-container div{
+  width: 50%;
+  height: 65rem;
+  border: solid;
+}
+
+#cart-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: var(--light-blue2);
+  border-left: solid;
+  border-color:black;
+  color:white;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+#cart-nav a {
+  color: black;
+  padding-left: 85%;
+}
+
+#cart-nav a:hover {
+  color: var(--orange);
+}
+.preview-description {
+  font-size: 3.5rem;
+  font-weight: 500;
+  padding: 15rem 1rem 4rem 13rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#preview-price {
+  font-size: 2.5rem;  
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul button {
+  font-size: 2rem;
+  margin-top: 5rem;
+  width: 30%;
+  height: 30%;
+}
+
+.categories {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.categories div:hover {
+  cursor:pointer;
+  background-color: var(--orange2);
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.category a {
+  font-size: 2.5rem;
+}
+
+.category span {
+  font-size: 2rem;
+  color: rgb(61, 61, 61);
+  margin: auto;
+}
+
+.footer-container {
+  padding: 3rem 0 12rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: var(--light-blue2);
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.footer-section ul{
+  list-style-type: none;
+  padding: 0;
+  font-size: 2rem;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
