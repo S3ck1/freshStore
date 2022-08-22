@@ -57,7 +57,13 @@ async function displayProducts(category) {
     <div class="product-card">
       <div class="product-img-container">
         <img src=${product.image} alt="" class="product-img">
-      </div>
+        </div>
+        <div class="product-bottom-section">
+          <span class="product-price">$${product.price}</span>
+          <div class="btn-container">
+            <button class="add-btn">+</button>
+          </div>
+        </div>
     </div>
     `);
     const cardText = productCards.join("");

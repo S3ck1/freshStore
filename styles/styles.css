@@ -1,15 +1,14 @@
 :root {
-  --orange: #ff9f1c;
-  --orange2: #ffbf69;
-  --light-blue: #2ec4b6;
-  --light-blue2: #cbf3f0;
-  
+  --primary: #495867;
+  --secondary: #577399;
+  --light-blue: #bdd5ea;
+  --white: #f7f7ff;
+  --red: #fe5f55;
 }
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  
 }
 
 *,
@@ -18,23 +17,24 @@ html {
   box-sizing: inherit;
 }
 
-body{
-  font-size: 2.3rem;
-  font-family: 'Roboto', sans-serif;
+body {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: black;
+  background-color: var(--white);
 }
 
-h1{
-  font-size: 4.5rem;
+h1 {
+  font-size: 6rem;
   font-weight: 700;
   font-style: italic;
   text-align: center;
-  color: orange;
+  color: var(--primary);
 }
 
 h1 i {
-  color: black
+  color: var(--primary);
 }
 
 h1 i:hover {
@@ -42,7 +42,7 @@ h1 i:hover {
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 
 a {
@@ -50,22 +50,19 @@ a {
 }
 
 .main-nav {
-  width: 75%;
+  width: 95%;
   display: flex;
   justify-content: center;
-  border: solid;
   margin: auto;
   margin-top: 5rem;
   padding: 1.5rem 0 1.5rem 0;
-  background-color: var(--light-blue2);
+  background-color: var(--light-blue);
 }
 
-
-.main-nav div{
+.main-nav div {
   font-weight: 400;
   padding: 0 10rem 0 10rem;
 }
-
 
 .nav-logo {
   margin-right: auto;
@@ -78,25 +75,25 @@ a {
   justify-content: center;
 }
 
-.nav-menu a{
-  color: black
+.nav-menu a {
+  color: black;
 }
 .nav-menu a:hover {
-  color: var(--orange);
-  font-weight: 600;
-} 
+  color: var(--primary);
+  font-weight: 700;
+}
 
 .nav-btns {
   margin-left: auto;
 }
 
 .nav-logo span::hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.nav-btns span:hover{
-  cursor:pointer;
-  color: var(--orange);
+.nav-btns span:hover {
+  cursor: pointer;
+  color: var(--primary);
 }
 
 #icon {
@@ -104,17 +101,23 @@ a {
   height: 5rem;
 }
 
-
 .main-container {
-  margin: 5rem 25rem 5rem 25rem;
-  display: flex;
+  background-color: var(--secondary);
+  color: var(--white);
+  margin: auto;
+  margin-top: 2rem;
   gap: 2rem;
+  border: solid;
+  border-width: thin;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
 }
 
-.main-container div{
+.main-container div {
   width: 50%;
-  height: 65rem;
-  border: solid;
+  height: 60rem;
 }
 
 #cart-nav {
@@ -124,13 +127,15 @@ a {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: var(--light-blue2);
+  background-color: var(--white);
   border-left: solid;
-  border-color:black;
-  color:white;
+  border-color: black;
+  color: var(--primary);
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
+  text-align: center;
+  font-size: 2rem;
 }
 
 #cart-nav a {
@@ -139,44 +144,65 @@ a {
 }
 
 #cart-nav a:hover {
-  color: var(--orange);
+  color: var(--primary);
 }
 
 .preview-description {
-  font-size: 3.5rem;
+  font-size: 5.5rem;
   font-weight: 500;
   padding: 15rem 1rem 4rem 13rem;
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-left: 30rem;
 }
 
 #preview-price {
-  font-size: 2.5rem;  
+  font-size: 3rem;
+}
+
+.preview-img {
+  margin-right: 30rem;
 }
 
 ul {
   list-style-type: none;
 }
 
-ul button {
+.preview button {
+  color: var(--white);
+  background-color: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
   font-size: 2rem;
-  margin-top: 5rem;
-  width: 30%;
-  height: 30%;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  width: 35%;
+  height: 25%;
 }
 
 .categories {
   margin: auto;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   gap: 5rem;
 }
 
 .categories div:hover {
-  cursor:pointer;
-  background-color: var(--orange2);
+  cursor: pointer;
+  background-color: var(--red);
+  color: var(--white);
+  border: solid;
+  border-width: thin;
 }
 
 .category {
@@ -196,7 +222,6 @@ ul button {
   margin: auto;
 }
 
-
 .main-products-container {
   display: flex;
   justify-content: center;
@@ -213,12 +238,15 @@ ul button {
   font-size: 40px;
 }
 
-.product-card{
+.product-card {
   margin: auto;
   width: 30rem;
   height: 32rem;
   border: solid;
-  color:black;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .product-img-container {
@@ -232,12 +260,51 @@ ul button {
   height: 20rem;
 }
 
+.product-price {
+  font-size: 2.8rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20%;
+  margin-top: 1rem;
+}
+
+.product-bottom-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-container {
+}
+
+.btn-container button {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--white);
+  border: 1px solid rgb(138, 138, 138);
+  line-height: 1.25rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  text-decoration: none #d1d5db solid;
+  text-decoration-thickness: auto;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  margin-left: 5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-container button:hover {
+  background-color: var(--red);
+}
+
 .footer-container {
   padding: 3rem 0 12rem 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background: var(--light-blue2);
+  background: var(--light-blue);
 }
 
 .footer-section {
@@ -246,7 +313,7 @@ ul button {
   justify-content: left;
 }
 
-.footer-section ul{
+.footer-section ul {
   list-style-type: none;
   padding: 0;
   font-size: 2rem;

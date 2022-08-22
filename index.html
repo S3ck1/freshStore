@@ -29,7 +29,7 @@
   <body>
     <header>
       <div></div>
-      <h1>Fresh Clothing <i class="fa-regular fa-face-laugh-wink"></i></h1>
+      <h1>Fresh Store <i class="fa-regular fa-face-laugh-wink"></i></h1>
       <nav class="main-nav container">
         <div class="nav-logo container">
           <span class="material-symbols-outlined" id="store-logo"> store </span>
@@ -50,9 +50,10 @@
       </nav>
       <div class="main-container container">
         <div class="preview-description">
-          <ul>
+          <ul class ="preview">
             <li id="preview-txt">Preview</li>
             <li id="preview-price">$50.00</li>
+            <br>
             <button>ADD TO CART</button>
           </ul>
         </div>
@@ -60,6 +61,8 @@
       </div>
       <div id="cart-nav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2>My Cart</h2>
+        <div id ="cart-products-container"></div>
       </div>
       <nav class="categories">
         <div id="category-all" class="category">
