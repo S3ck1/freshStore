@@ -61,7 +61,7 @@ async function displayProducts(category) {
         <div class="product-bottom-section">
           <span class="product-price">$${product.price}</span>
           <div class="btn-container">
-            <button class="add-btn">+</button>
+            <button id = "${product.id}" class="add-btn" onclick="addToCart(${product.id})">+</button>
           </div>
         </div>
     </div>
@@ -100,3 +100,43 @@ let productCategoriesBtns = document.querySelectorAll(".category");
     });
   });
 })();
+
+let cartContainerCards = [];
+let cartContainer = document.querySelector("#cart-products-container");
+async function addToCart(id) {
+  let product = await fetchData(`${API}/products/${id}`);
+  console.log(product);
+  cartContainerCards.push(`
+    <div class ="cart-product-container">
+      <div class ="cart-img-container">
+        <img class="cart-img" src=${product.image} alt=""">
+      </div>
+      <div class ="cart-product-details">
+        <br>
+        <span class="cart-product-title">${product.title}</span>
+        <br>
+        <span class="cart-product-price">$${product.price}</span>
+      </div>
+    </div>
+  `)
+  const cardText = cartContainerCards.join("");
+  cartContainer.innerHTML = cardText;
+}
+
+function addPreviewItem() {
+  cartContainerCards.push(`
+    <div class ="cart-product-container">
+      <div class ="cart-img-container">
+        <img class="cart-img" src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt=""">
+      </div>
+      <div class ="cart-product-details">
+        <br>
+        <span class="cart-product-title">Men's Cotton Jacket</span>
+        <br>
+        <span class="cart-product-price">$55.99</span>
+      </div>
+    </div>
+  `)
+  const cardText = cartContainerCards.join("");
+  cartContainer.innerHTML = cardText;
+}

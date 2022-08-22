@@ -51,13 +51,13 @@
       <div class="main-container container">
         <div class="preview-description">
           <ul class ="preview">
-            <li id="preview-txt">Preview</li>
-            <li id="preview-price">$50.00</li>
+            <li id="preview-txt">Men's Cotton Jacket</li>
+            <li id="preview-price">$55.99</li>
             <br>
-            <button>ADD TO CART</button>
+            <button onclick="addPreviewItem()"class ="preview-btn">ADD TO CART</button>
           </ul>
         </div>
-        <div class="preview-img"></div>
+        <div class="preview-img"><img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt=""></div>
       </div>
       <div id="cart-nav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -68,22 +68,22 @@
         <div id="category-all" class="category">
           <h3>Show All</h3>
           <br />
-          <span>0 products</span>
+          <span>15 products</span>
         </div>
         <div id="category-men" class="category">
           <h3>Men's clothing</h3>
           <br />
-          <span>0 products</span>
+          <span>5 products</span>
         </div>
         <div id="category-women" class="category">
           <h3>Women's clothing</h3>
           <br />
-          <span>0 products</span>
+          <span>6 products</span>
         </div>
         <div id="category-jewelery" class="category">
           <h3>Jewerely</h3>
           <br />
-          <span>0 products</span>
+          <span>4 products</span>
         </div>
       </nav>
       <div class="main-products-container">
@@ -132,15 +132,6 @@
       function closeNav() {
         document.querySelector("#cart-nav").style.width = "0";
       }
-    </script>
-    <script>
-      function switchTheme() {
-        document.querySelector("body").style.backgroundColor = "black";
-        document.querySelector("h1").querySelector("i").style.color = "white";
-        document.querySelector(".main-container").style.color="white";
-        document.querySelector(".categories").style.color="white";
-      }
-
     </script>
     <script src="index.js"></script>
   </body>
