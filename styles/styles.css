@@ -289,6 +289,7 @@ ul {
   width: 30rem;
   height: 32rem;
   border: solid;
+  border-width: thin;
   color: black;
   display: flex;
   flex-direction: column;
